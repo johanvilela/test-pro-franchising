@@ -26,12 +26,13 @@
     ]
   },
   "dependencies": {
-    "axios": "^0.26.0",
+    "axios": "^0.21.1",
     "next": "^12.1.0",
     "next-pwa": "^5.4.4",
     "nookies": "^2.5.2",
     "polished": "^4.1.4",
     "react": "17.0.2",
+    "react-data-table-component": "^7.4.7",
     "react-dom": "17.0.2",
     "react-hook-form": "^7.27.1",
     "react-icons": "^4.3.1",
