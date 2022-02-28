@@ -1,7 +1,22 @@
-## Avaliação Técnica Pro Franchising ##
+# Avaliação Técnica Pro Franchising #
+
+## Como executar o projeto ##
+
+Clone o repositório e execute os seguintes comandos na pasta do projeto:
+
+1. `npm install` ou `yarn`;
+2. `npm run dev` ou `yarn dev`;
+
+Para visualizar o projeto, abra `http://localhost:3000`
+
+## Sobre a avaliação ##
+
 Tecnologia: React ou React Native
+
 API: Documentação: prova.deploy.profranchising.com.br
+
 Documentação: https://prova.deploy.profranchising.com.br/swagger-ui.html
+
 Objetivo:
 * Desenvolver uma aplicação frontend implementando as rotas REST API.
 * Essa aplicação ira resolver o cadastro de produtos e suas receitas.
@@ -26,7 +41,6 @@ Objetivo:
 * Ao clicar no botão `Add Product` o produto é inserido e o usuário é redirecionado para a `Dashboard`
 
 ### Requisitos ###
-Requisitos:
 * Tela de login (proteger rotas)
 * Lista de itens com paginação
 * Editar item
@@ -34,4 +48,5 @@ Requisitos:
 * Adicionar item
 * Validação nos formulários
 * Criar repositório no GitHub
+
 *Pode usar qualquer biblioteca que julgue necessário.
