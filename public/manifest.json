@@ -1,6 +1,6 @@
 {
-  "name": "App name",
-  "short_name": "APP",
+  "name": "Pro Franchising",
+  "short_name": "Pro",
   "icons": [
     {
       "src": "/img/bg.png",
@@ -14,7 +14,7 @@
     }
   ],
   "background_color": "#0c0f16",
-  "description": "App PWA",
+  "description": "Pro PWA",
   "display": "fullscreen",
   "start_url": "/",
   "theme_color": "#0c0f16"
