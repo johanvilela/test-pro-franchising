@@ -1,6 +1,7 @@
+import { useRouter } from 'next/router';
 import { FormEvent, useState } from 'react';
 
-import { userSign } from 'services/http/post';
+import { SignIn } from 'services/http/SignIn';
 
 import Button from 'components/Button';
 import Form from 'components/Form';
@@ -9,17 +10,21 @@ import Input from 'components/Input';
 import * as S from './styles';
 
 const Login = () => {
-  const [userName, setUserName] = useState(
-    'a5d4eff8-d210-4214-b0a3-5863547fe028@profranchising.com.br'
-  );
+  const [userName, setUserName] = useState(process.env.NEXT_PUBLIC_USER_NAME);
   const [password, setPassword] = useState(
-    'c500f845-cb01-4647-9a73-f5e284768a72'
+    process.env.NEXT_PUBLIC_USER_PASSWORD
   );
+
+  const { push } = useRouter();
 
   async function handleSubmit(event: FormEvent) {
     event.preventDefault();
 
-    await userSign(userName, password);
+    const isLogged = await SignIn(userName, password);
+
+    if (isLogged) {
+      push('/dashboard');
+    }
   }
 
   return (
