@@ -3,13 +3,15 @@ import api from 'services/api';
 
 const TOKEN_EXPIRATION = 60 * 60 * 1; // 1 day
 
-export async function userSign(username: string, password: string) {
+export const SignIn = async (username: string, password: string) => {
   const response = await api.post('/auth/login', {
     username,
     password
   });
 
-  if (!response.data) return;
+  if (!response.data) {
+    return false;
+  }
 
   const { name } = response.data;
   const { authorization } = response.headers;
@@ -21,4 +23,6 @@ export async function userSign(username: string, password: string) {
   setCookie(undefined, 'user-token', authorization, {
     maxAge: TOKEN_EXPIRATION
   });
-}
+
+  return true;
+};
